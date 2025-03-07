@@ -1,0 +1,47 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="container">
+    <div class="input">
+      <p>
+        <label for="initial-investment">INITIAL INVESTMENT</label>
+        <!-- this ngmodel will listen to changes in the in put and update according to our choice -->
+        <!-- This ng model accepts signal automatically no need to separately call them  -->
+        <input
+          id="initial-investment"
+          name="initial-investment"
+          type="number"
+          [(ngModel)]="enteredInitialInvestment"
+        />
+      </p>
+      <p>
+        <label for="annual-investment">ANNUAL INVESTMENT</label>
+        <input
+          id="annual-investment"
+          name="annual-investment"
+          type="number"
+          [(ngModel)]="enteredAnualInvestment"
+        />
+      </p>
+    </div>
+    <div class="input">
+      <p>
+        <label for="expected-return">EXPECTED RETURN </label>
+        <input
+          id="expected-return"
+          name="expected-return"
+          type="number"
+          [(ngModel)]="enteredExpectedReturn"
+        />
+      </p>
+      <p>
+        <label for="duration">DURATION</label>
+        <input
+          id="duration"
+          type="number"
+          [(ngModel)]="enteredDuration"
+          name="duration"
+        />
+      </p>
+    </div>
+  </div>
+  <p><button>CALCULATE</button></p>
+</form>
